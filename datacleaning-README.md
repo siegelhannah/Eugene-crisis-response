@@ -33,7 +33,7 @@ This Jupyter notebook performs the initial data cleaning and preprocessing for t
   
       jupyter lab
   
-2. Open `datacleaning-script.ipynb` from the Jupyter interface
+2. Open `datacleaning-final.ipynb` from the Jupyter interface
   
 3. Run all cells in sequence
   
@@ -49,7 +49,7 @@ The notebook will generate:
 
 ## Important Notes
 
-* This notebook must be run before the EDA and analysis notebooks
-* The `clean_data.csv` file is required for the subsequent notebooks to function
+* This notebook must be run before the analysis notebook
+* The `clean_data.csv` file is required for the other notebook to function
 * Running time may vary depending on the size of the raw data files
 * If you encounter any data path issues, ensure that the raw data files are correctly extracted from the zip file
