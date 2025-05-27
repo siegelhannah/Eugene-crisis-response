@@ -18,8 +18,7 @@ This Jupyter notebook performs the final data analysis on the Eugene crisis resp
 
 1. Ensure you have completed the previous steps:
   
-  * Run `datacleaning-script.ipynb` first to generate `clean_data.csv`
-  * Optionally, review `EDA-and-engineering.ipynb` for context
+  * Run `datacleaning-final.ipynb` first to generate `clean_data.csv`
 2. If you need the raw data for reference:
   
   * Navigate to the `project-data` folder
