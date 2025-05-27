@@ -4,8 +4,7 @@ This repository contains a data science analysis project focused on Eugene crisi
 
 ## Repository Contents
 
-* `datacleaning-script.ipynb`: Initial data cleaning and preprocessing
-* `EDA-and-engineering.ipynb`: Exploratory data analysis and feature engineering
+* `datacleaning-final.ipynb`: Initial data cleaning and preprocessing
 * `data-analysis.ipynb`: Final data analysis and visualization
 * `project-data/zipped-raw-data.zip`: Compressed raw datasets used by the notebooks
 
@@ -25,15 +24,11 @@ This repository contains a data science analysis project focused on Eugene crisi
 
 Follow these steps to run the complete analysis:
 
-1. **First:** Run `datacleaning-script.ipynb`
+1. **First:** Run `datacleaning-final.ipynb`
   
   * This will process the raw data files and generate `clean_data.csv`
   * The clean data file will be saved in the project directory
-2. **Second:** Run `EDA-and-engineering.ipynb`
-  
-  * This notebook uses the `clean_data.csv` file created in step 1
-  * It performs exploratory analysis and feature engineering
-3. **Third:** Run `data-analysis.ipynb`
+2. **Second:** Run `data-analysis.ipynb`
   
   * This notebook uses the `clean_data.csv` file created in step 1
   * It performs the final analysis and generates visualizations
