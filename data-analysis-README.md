@@ -1,6 +1,6 @@
-# Data Cleaning Script
+# Data Analysis Script
 
-This Jupyter notebook performs the initial data cleaning and preprocessing for the Eugene crisis response data analysis project.
+This Jupyter notebook performs the final data analysis on the Eugene crisis response dataset, including statistical tests, modeling, and visualization of results.
 
 ## Prerequisites
 
@@ -9,23 +9,28 @@ This Jupyter notebook performs the initial data cleaning and preprocessing for t
 * Required libraries:
   * pandas
   * numpy
-  * matplotlib (for optional visualizations)
+  * matplotlib
+  * seaborn
+  * scikit-learn
+  * statsmodels (for statistical testing)
 
 ## Setup Instructions
 
-1. Extract the raw data files:
+1. Ensure you have completed the previous steps:
+  
+  * Run `datacleaning-final.ipynb` first to generate `clean_data.csv`
+2. If you want to use an example, small dataset for reference:
   
   * Navigate to the `project-data` folder
-  * Extract the contents of `zipped-raw-data.zip` in the same directory
-  * Verify that all raw data files are now accessible
-2. Install required dependencies:
+  * Use `sample_clean_data.csv`
+3. Install required dependencies:
   
-      pip install pandas numpy matplotlib
+      pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
   
 
 ## Running the Notebook
 
-1. Launch Jupyter Notebook/Lab in your project directory:
+1. Launch Jupyter Notebook/Lab:
   
       jupyter notebook
   
@@ -33,23 +38,35 @@ This Jupyter notebook performs the initial data cleaning and preprocessing for t
   
       jupyter lab
   
-2. Open `datacleaning-script.ipynb` from the Jupyter interface
+2. Open `data-analysis.ipynb` from the Jupyter interface
   
-3. Run all cells in sequence
+3. Run all cells:
   
-  * The notebook includes detailed markdown cells explaining each step
-  * Monitor cell execution for any warnings or errors
+  * Use Cell → Run All or run each cell with Shift+Enter
+  * Pay attention to markdown cells for explanation of analysis steps
+  * Some analyses or model training may take time to complete
+
+## Key Components
+
+This notebook contains:
+
+* Final data preparation for analysis
+* Statistical hypothesis testing
+* Generating statistical summaries
+* Final visualizations and interpretations
+* Conclusions and recommendations
 
 ## Output
 
-The notebook will generate:
+The notebook generates:
 
-* `clean_data.csv`: A cleaned and preprocessed dataset that will be used by the subsequent notebooks
-* This file will be saved in the project root directory
+* Final analysis results
+* Visualizations for presentation
+* Potential recommendations based on the data
 
 ## Important Notes
 
-* This notebook must be run before the EDA and analysis notebooks
-* The `clean_data.csv` file is required for the subsequent notebooks to function
-* Running time may vary depending on the size of the raw data files
-* If you encounter any data path issues, ensure that the raw data files are correctly extracted from the zip file
+* This notebook represents the culmination of the analysis pipeline
+* All findings should be interpreted within the context of the project goals
+* Results may vary based on any parameters or configurations you adjust
+* The notebook includes markdown cells documenting key findings and conclusions
