@@ -1,6 +1,6 @@
-# Data Analysis
+# Data Cleaning Script
 
-This Jupyter notebook performs the final data analysis on the Eugene crisis response dataset, including statistical tests, modeling, and visualization of results.
+This Jupyter notebook performs the initial data cleaning and preprocessing for the Eugene crisis response data analysis project.
 
 ## Prerequisites
 
@@ -9,29 +9,29 @@ This Jupyter notebook performs the final data analysis on the Eugene crisis resp
 * Required libraries:
   * pandas
   * numpy
-  * matplotlib
-  * seaborn
-  * scikit-learn
-  * statsmodels (for statistical testing)
+  * matplotlib (for optional visualizations)
 
 ## Setup Instructions
 
-1. Ensure you have completed the previous steps:
+1. Obtain the raw data files:
+
+* Call data from CAD (computer-aided dispatch system). A sample version of this dataset's structure (5 rows) is available for use in `project-data/sample_CAD_2014_data.csv`.
+
+* Freely-available daily weather data in Eugene, OR; Downloaded from VisualCrossing.com; 2014 to 2025: Data must be downloaded in segments. In `data-cleaning-final.ipynb` I read in separate files for 2014-01-01 to 2016-07-31, 2016-08-01 to 2018-12-31, 2019-01-01 to 2021-07-31, 2021-08-01 to 2023-12-31, and 2024-01-01 to 2025-04-07, then concatenate them together.
+
+* Freely-available daily air quality index (AQI) data in Eugene, OR; Downloaded from the EPA's Pre-Generated Data Files at https://aqs.epa.gov/aqsweb/airdata/download_files.html; 2014 to 2024. Data must be downloaded in segments by year. In `data-cleaning-final.ipynb` I read in seperate files for 2014 through 2024.
+
+** Reference the file read-in code in the notebooks to organize your downloaded data in your directory accordingly, or modify the file read-in code to fit your directory's structure.**
+
+
+2. Install required dependencies:
   
-  * Run `datacleaning-script.ipynb` first to generate `clean_data.csv`
-  * Optionally, review `EDA-and-engineering.ipynb` for context
-2. If you need the raw data for reference:
-  
-  * Navigate to the `project-data` folder
-  * Extract the contents of `zipped-raw-data.zip` in the same directory
-3. Install required dependencies:
-  
-      pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
+      pip install pandas numpy matplotlib
   
 
 ## Running the Notebook
 
-1. Launch Jupyter Notebook/Lab:
+1. Launch Jupyter Notebook/Lab in your project directory:
   
       jupyter notebook
   
@@ -39,35 +39,23 @@ This Jupyter notebook performs the final data analysis on the Eugene crisis resp
   
       jupyter lab
   
-2. Open `data-analysis.ipynb` from the Jupyter interface
+2. Open `datacleaning-final.ipynb` from the Jupyter interface
   
-3. Run all cells:
+3. Run all cells in sequence
   
-  * Use Cell → Run All or run each cell with Shift+Enter
-  * Pay attention to markdown cells for explanation of analysis steps
-  * Some analyses or model training may take time to complete
-
-## Key Components
-
-This notebook contains:
-
-* Final data preparation for analysis
-* Statistical hypothesis testing
-* Generating statistical summaries
-* Final visualizations and interpretations
-* Conclusions and recommendations
+  * The notebook includes detailed markdown cells explaining each step
+  * Monitor cell execution for any warnings or errors
 
 ## Output
 
-The notebook generates:
+The notebook will generate:
 
-* Final analysis results
-* Visualizations for presentation
-* Potential recommendations based on the data
+* `clean_data.csv`: A cleaned and preprocessed dataset that will be used by the subsequent notebooks
+* This file will be saved in the project root directory
 
 ## Important Notes
 
-* This notebook represents the culmination of the analysis pipeline
-* All findings should be interpreted within the context of the project goals
-* Results may vary based on any parameters or configurations you adjust
-* The notebook includes markdown cells documenting key findings and conclusions
+* This notebook must be run before the analysis notebook
+* The `clean_data.csv` file is required for the other notebook to function
+* Running time may vary depending on the size of the raw data files
+* If you encounter any data path issues, ensure that the raw data files are correctly extracted from the zip file
